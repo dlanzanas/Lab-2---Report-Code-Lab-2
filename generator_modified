@@ -4,6 +4,7 @@ def getWords(filename):
     with open(filename, 'r') as file:
         return tuple(word.strip() for word in file.readlines())
 
+# for the articles
 articles = getWords('articles.txt')
 nouns = getWords('nouns.txt')
 verbs = getWords('verbs.txt')
