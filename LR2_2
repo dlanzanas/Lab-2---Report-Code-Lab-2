@@ -5,8 +5,10 @@ def main():
         with open(filename, 'r') as file:
             lines = file.readlines()
 
+        # Strip whitespace from each line
         lines = [line.strip() for line in lines]
 
+        # Display the number of lines in the file
         print(f"The file contains {len(lines)} lines.")
 
         while True:
@@ -29,4 +31,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
