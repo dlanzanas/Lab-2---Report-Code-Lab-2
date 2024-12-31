@@ -1,14 +1,14 @@
-
+from collections import Counter
 
 def median(numbers):
     if not numbers:
         return 0
     sorted_numbers = sorted(numbers)
     n = len(sorted_numbers)
-    midpoint = n // 2
+    mid_index = n // 2
     if n % 2 == 1:
-        return sorted_numbers[midpoint]
-    return (sorted_numbers[midpoint - 1] + sorted_numbers[midpoint]) / 2
+        return sorted_numbers[mid_index]
+    return (sorted_numbers[mid_index - 1] + sorted_numbers[mid_index]) / 2
 
 def mode(numbers):
     if not numbers:
@@ -25,6 +25,8 @@ def mean(numbers):
 
 def main():
     numbers = [1, 2, 2, 3, 4]
+    
+    # stats
     print("Numbers:", numbers)
     print("Median:", median(numbers))
     print("Mode:", mode(numbers))
